@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+
+    <title>Nisat News Portal</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Genos:ital,wght@0,500;0,600;0,800;1,300&family=Josefin+Sans:ital,wght@0,300;0,700;1,300;1,600&family=Raleway:ital,wght@1,400;1,500;1,600&family=Rampart+One&family=Roboto+Mono:ital,wght@0,400;1,700&family=Sono:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+/* Global Styles */
+
+body {
+
+  background-image: url("https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgoAi5sKH8rxqvfZZFbHgEqWPWfmBL121lVv0Djh-EvivCqxdzMT2TOfCScoK1AkRBlV1U5Nm2kj9FDqsvTMrHPqBpwmGTh5tpD-l7uaccVslziCOnH66Rv1Rn3IqkVkjJelXw7IhuJ67bvGm5eng1P2Vn2qg--Mzj8AJ2riLPH2QVQGbgT-4DNFa1eWQ/s2100/waterdrop-1.gif");
+
+  font-family: 'Genos', sans-serif;
+
+font-family: 'Josefin Sans', sans-serif;
+
+font-family: 'Raleway', sans-serif;
+
+font-family: 'Rampart One', cursive;
+
+font-family: 'Roboto Mono', monospace;
+
+font-family: 'Sono', sans-serif;
+
+}
+
+/* Header Styles */
+
+header {
+
+  background-color: #333;
+
+  color: #fff;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  padding: 10px;
+
+}
+
+header h1 {
+
+  margin: 0;
+
+  font-size: 32px;
+
+  font-weight: bold;
+
+}
+
+header nav ul {
+
+  display: flex;
+
+  list-style-type: none;
+
+  margin: 0;
+
+  padding: 0;
+
+}
+
+header nav li {
+
+  margin: 0 10px;
+
+}
+
+header nav a {
+
+  color: #fff;
+
+  text-decoration: none;
+
+  font-weight: bold;
+
+}
+
+header a:hover {
+
+  text-decoration: underline;
+
+}
+
+/* Styling for main section */
+
+main {
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  flex-direction: column;
+
+  margin: 20px;
+
+}
+
+section.main {
+
+  display: flex;
+
+  flex-wrap: wrap;
+
+  justify-content: center;
+
+  align-items: center;
+
+  margin: 20px;
+
+}
+
+/* Styling for article section */
+
+article {
+
+  display: flex;
+
+  flex-wrap: wrap;
+
+  justify-content: center;
+
+  align-items: center;
+
+  background: silver;
+
+  padding: 10px;
+
+  margin: 10px;
+
+  border-radius: 5px;
+
+}
+
+button.my-button {
+
+  background-color: #007bff;
+
+  color: white;
+
+  border: none;
+
+  padding: 10px;
+
+  margin: 10px;
+
+  border-radius: 5px;
+
+  cursor: pointer;
+
+}
+
+.latest-news {
+
+  display: flex;
+
+  flex-wrap: wrap;
+
+  justify-content: space-between;
+
+  margin: 20px 0;
+
+}
+
+.latest-news h2 {
+
+  font-size: 24px;
+
+  margin-bottom: 10px;
+
+}
+
+.latest-news ul {
+
+  list-style: none;
+
+  margin: 0;
+
+  padding: 0;
+
+}
+
+.latest-news li {
+
+  background-color: #f5f5f5;
+
+  border-radius: 5px;
+
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+  flex-basis: calc(33.33% - 10px);
+
+  margin-bottom: 20px;
+
+  padding: 10px;
+
+}
+
+.latest-news li img {
+
+  display: block;
+
+  margin: 0 auto 10px;
+
+}
+
+.latest-news li h3 {
+
+  font-size: 20px;
+
+  margin-bottom: 5px;
+
+}
+
+.latest-news li p {
+
+  font-size: 16px;
+
+  margin-bottom: 10px;
+
+}
+
+.latest-news li a {
+
+  color: #007bff;
+
+  text-decoration: none;
+
+  font-weight: bold;
+
+}
+
+.latest-news li a:hover {
+
+  text-decoration: underline;
+
+}
+
+footer {
+
+  background-color: #333;
+
+  color: #fff;
+
+  padding: 50px;
+
+}
+
+footer h4 {
+
+  font-size: 24px;
+
+  margin-bottom: 20px;
+
+}
+
+.footer-links li {
+
+  list-style-type: none;
+
+  margin-bottom: 10px;
+
+}
+
+.footer-links li a {
+
+  text-decoration: none;
+
+  color: #fff;
+
+}
+
+.social-icons li {
+
+  display: inline-block;
+
+  margin-right: 10px;
+
+}
+
+.social-icons li:last-child {
+
+  margin-right: 0;
+
+}
+
+.social-icons li a {
+
+  color: #fff;
+
+}
+
+.contact-info li {
+
+  list-style-type: none;
+
+  margin-bottom: 10px;
+
+}
+
+.contact-info li i {
+
+  margin-right: 10px;
+
+}
+
+</style>
+
+  </head>
+
+  <body>
+
+    <header>
+
+      <nav>
+
+		  <a href="index.html"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjEaR8plNvn2sVU7vg90efcDkumc21cFHWMgnFfyBOUPvQb_gpTwHvvN5VzKzrvyRPGxZWKufdGnCfyWQ-yGOlhKFFG-vnGTfmEeB7qQzLqa0hoNKnxNt9gYmxzQAC-9c4Mf0WmJhi5XxqKFVGikroWKRiQLV0KMsdywKraI0-SqfCgwBEXaVDXSBc7nA/s3264/20230315_214443.png" height="80" width="150"</a>			<ul>
+
+				<li><a href="index.html"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgMEzibo0lrD3Fdnu3v8MzANf7Aszou8eKdQPfuUeZCZ0qdECZdWz3g9o5jaX-TChozFUEyv7e7UTCiJuSODaasDZ0hmlcTqz-ale7QA1TWu5U3S80uJKDCX4lrHCQUE7YaENF1ma4feva5I99f1g5clAVZNbI483B1WIFEAk7n_vj4X0sXJ_k5ZxhCbA/s259/1678807231318.png" height="20" width="30">Home</a></li>
+
+				<li><a href="sports.html"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhDFhMUQyhSoJfy3A7TrrTRu98PxndULnITU9LpjY016_7kQYy3y3nVXUeuxzmtjTTiEz8569Bf50k8A294hZwldkkUFf6Qa4lTbIpUiaAwKHz9ROtg5EBCHeRoULAqRJpAG4XnK_koBOUKhzUj65KQPIKBNHv05dnsupNwA_52DMjjGXBWJ6JoXVnEJg/s3264/20230314_212748.png" height="18" width="28">Sports</a></li>
+
+				<li><a href="world.html"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEidq23BFddIbj7HpFfTvaJPARustFEkJG_Tp6tI51MkikwvJAVf4pJOrdhjtcuFtUJ03wE-ihsg_NaN4f09FdVy6jXv0YT4vv7XLJ8B5p47MSWXQ8DVC-ttWz2dzujAKHTGWJGQ1cnnlqZQzvs3gmcnudgi_WDZV0NVfZkzIfUW34DurLmG3Wg_Tx8s0w/s3264/20230314_213901.png" height="25" width="25">World News</a></li>
+
+				<li><a href="contactus.html"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjT8hYouIfLX_LP4YaPE1tSzlh22GdJXWcHTiSx5k8M6iN91Ujm-MFUOMkfH69FxcXudGIBDdQk7moiXReCwLrUNcOOoI-XgcI2rZllvqyCHbSf4pP2Dojpj2FQRlJ-eeZLDIuXQeW4LjiMKwe9dp0W2_XvvK7YyOxbIds5llmCOf4DrgmJmqs7l_PsPQ/s1280/20230314_214410.png" height="25" width="25">Contact Us</a></li>
+
+			</ul>
+
+		</nav>
+
+    </header>
+
+    <main>
+
+      	<section class="main">
+
+		    <Article style="background:silver">
+
+		      <a href="https://www.facebook.com/HedaMinal.HedaCho.Team.Ar.Bap?mibextid=ZbWKwL"></a><button class="my-button">Popular News</button></a>
+
+		      		      <a href="https://www.facebook.com/HedaMinal.HedaCho.Team.Ar.Bap?mibextid=ZbWKwL"></a><button class="my-button">Popular News</button></a>
+
+		      <a href="https://www.facebook.com/HedaMinal.HedaCho.Team.Ar.Bap?mibextid=ZbWKwL"></a><button class="my-button">Popular News</button></a>
+
+		      <a href="https://www.facebook.com/HedaMinal.HedaCho.Team.Ar.Bap?mibextid=ZbWKwL"></a><button class="my-button">Popular News</button></a>
+
+		      		      <a href="https://www.facebook.com/HedaMinal.HedaCho.Team.Ar.Bap?mibextid=ZbWKwL"></a><button class="my-button">Popular News</button></a>
+
+		      <a href="https://www.facebook.com/HedaMinal.HedaCho.Team.Ar.Bap?mibextid=ZbWKwL"></a><button class="my-button">Popular News</button></a>
+
+        </Article>
+
+				</section>
+
+				<h1>Devoloper Biography News</h1>
+
+<section class="latest-news">
+
+		
+
+			<ul>
+
+				<li>
+
+				  <header>
+
+				<h2>Devoloper Biography: Sabbir Hossen</h2>
+
+				<p class="meta-data">By Sabbir Hossen | March 15, 2023</p>
+
+			</header>
+
+					<img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiPqR76KfCPZJjDexagza0TkgBLzeUBR1ZLnPchhOA6vtsLokAP-H-P7uLtv1-MhkHn5iq28UXTrDtxRwrfnS3pQ1KCDfpd4MDKpdP-IkTqrtOQDq7ZEiVPaGE2hdL19YVoAlJ8WB8_umtCWjAcGbVSVMhN4gvwnsSYQ6wfrtBENQRnJXyPXS31I35Tug/s636/7tfce4.jpg" height="200" width="150">
+
+					<p>Sabbir Hossen('Nisat') is a Musician, Bangladeshi cyber security researcher,web designer,cyber security specialist & a copyrighter.</p>
+
+<a href="sabbirhossen.html"></a><button class="my-button">Read More</button></a>
+
+								<footer>
+
+				<p class="tags">Tags: <a href="#">Example Tag 1</a>, <a href="#">Example Tag 2</a></p>
+
+				</li>
+
+		</section>
+
+		<section class="latest-news">
+
+		
+
+			<ul>
+
+				<li>
+
+				  <header>
+
+				<h2>Devoloper Biography: Sabbir Hossen</h2>
+
+				<p class="meta-data">By Sabbir Hossen | March 15, 2023</p>
+
+			</header>
+
+					<img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiPqR76KfCPZJjDexagza0TkgBLzeUBR1ZLnPchhOA6vtsLokAP-H-P7uLtv1-MhkHn5iq28UXTrDtxRwrfnS3pQ1KCDfpd4MDKpdP-IkTqrtOQDq7ZEiVPaGE2hdL19YVoAlJ8WB8_umtCWjAcGbVSVMhN4gvwnsSYQ6wfrtBENQRnJXyPXS31I35Tug/s636/7tfce4.jpg" height="200" width="150">
+
+					<p>Sabbir Hossen('Nisat') is a Musician, Bangladeshi cyber security researcher,web designer,cyber security specialist & a copyrighter.</p>
+
+<a href="sabbirhossen.html"></a><button class="my-button">Read More</button></a>
+
+								<footer>
+
+				<p class="tags">Tags: <a href="#">Example Tag 1</a>, <a href="#">Example Tag 2</a></p>
+
+				</li>
+
+		</section>
+
+<section class="latest-news">
+
+		
+
+			<ul>
+
+				<li>
+
+				  <header>
+
+				<h2>Devoloper Biography: Sabbir Hossen</h2>
+
+				<p class="meta-data">By Sabbir Hossen | March 15, 2023</p>
+
+			</header>
+
+					<img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiPqR76KfCPZJjDexagza0TkgBLzeUBR1ZLnPchhOA6vtsLokAP-H-P7uLtv1-MhkHn5iq28UXTrDtxRwrfnS3pQ1KCDfpd4MDKpdP-IkTqrtOQDq7ZEiVPaGE2hdL19YVoAlJ8WB8_umtCWjAcGbVSVMhN4gvwnsSYQ6wfrtBENQRnJXyPXS31I35Tug/s636/7tfce4.jpg" height="200" width="150">
+
+					<p>Sabbir Hossen('Nisat') is a Musician, Bangladeshi cyber security researcher,web designer,cyber security specialist & a copyrighter.</p>
+
+<a href="sabbirhossen.html"></a><button class="my-button">Read More</button></a>
+
+								<footer>
+
+				<p class="tags">Tags: <a href="#">Example Tag 1</a>, <a href="#">Example Tag 2</a></p>
+
+				</li>
+
+		</section>
+
+		<section class="latest-news">
+
+		
+
+			<ul>
+
+				<li>
+
+				  <header>
+
+				<h2>Devoloper Biography: Sabbir Hossen</h2>
+
+				<p class="meta-data">By Sabbir Hossen | March 15, 2023</p>
+
+			</header>
+
+					<img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiPqR76KfCPZJjDexagza0TkgBLzeUBR1ZLnPchhOA6vtsLokAP-H-P7uLtv1-MhkHn5iq28UXTrDtxRwrfnS3pQ1KCDfpd4MDKpdP-IkTqrtOQDq7ZEiVPaGE2hdL19YVoAlJ8WB8_umtCWjAcGbVSVMhN4gvwnsSYQ6wfrtBENQRnJXyPXS31I35Tug/s636/7tfce4.jpg" height="200" width="150">
+
+					<p>Sabbir Hossen('Nisat') is a Musician, Bangladeshi cyber security researcher,web designer,cyber security specialist & a copyrighter.</p>
+
+<a href="sabbirhossen.html"></a><button class="my-button">Read More</button></a>
+
+								<footer>
+
+				<p class="tags">Tags: <a href="#">Example Tag 1</a>, <a href="#">Example Tag 2</a></p>
+
+				</li>
+
+		</section>
+
+<section class="latest-news">
+
+		
+
+			<ul>
+
+				<li>
+
+				  <header>
+
+				<h2>Devoloper Biography: Sabbir Hossen</h2>
+
+				<p class="meta-data">By Sabbir Hossen | March 15, 2023</p>
+
+			</header>
+
+					<img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiPqR76KfCPZJjDexagza0TkgBLzeUBR1ZLnPchhOA6vtsLokAP-H-P7uLtv1-MhkHn5iq28UXTrDtxRwrfnS3pQ1KCDfpd4MDKpdP-IkTqrtOQDq7ZEiVPaGE2hdL19YVoAlJ8WB8_umtCWjAcGbVSVMhN4gvwnsSYQ6wfrtBENQRnJXyPXS31I35Tug/s636/7tfce4.jpg" height="200" width="150">
+
+					<p>Sabbir Hossen('Nisat') is a Musician, Bangladeshi cyber security researcher,web designer,cyber security specialist & a copyrighter.</p>
+
+<a href="sabbirhossen.html"></a><button class="my-button">Read More</button></a>
+
+								<footer>
+
+				<p class="tags">Tags: <a href="#">Musician</a>, <a href="#">Biography</a></p>
+
+				</li>
+
+		</section>
+
+    </main>
+
+<footer>
+
+  <div class="container">
+
+    <div class="row">
+
+      <div class="col-md-3 col-sm-6">
+
+        <h4>About Us</h4>
+
+        <p>Nisat News Portal is a leading news organization in Bangladesh, providing reliable and trustworthy news coverage to our audience.</p>
+
+      </div>
+
+      <div class="col-md-3 col-sm-6">
+
+        <h4>Explore</h4>
+
+        <ul class="footer-links">
+
+ <li><a href="#">Home</a></li>
+
+          <li><a href="#">World News</a></li>
+
+          <li><a href="#">Sports News</a></li>
+
+          <li><a href="#">Technology News</a></li>
+
+          <li><a href="#">Entertainment</a></li>
+
+        </ul>
+
+      </div>
+
+      <div class="col-md-3 col-sm-6">
+
+        <h4>Follow Us</h4>
+
+        <ul class="social-icons">
+
+          <li><a href="https://www.facebook.com/HedaMinal.HedaCho.Team.Ar.Bap?mibextid=ZbWKwL"><i class="fab fa-facebook-f">Facebook</i></a></li>
+
+          <li><a href="https://twitter.com/SabbirH82886445?t=3s1R43PxS6P5M-VF6Wq5Hw&s=07">Tweeter<i class="fab fa-twitter"></i></a></li>
+
+          <li><a href="www.instagram.com/nilnisatahmed">Instagram<i class="fab fa-instagram"></i></a></li>
+
+        </ul>
+
+      </div>
+
+      <div class="col-md-3 col-sm-6">
+
+        <h4>Contact Us</h4>
+
+        <ul class="contact-info">
+
+          <li><i class="fas fa-map-marker-alt"></i> 123 ABC Street, Dhaka, Bangladesh</li>
+
+          <li><i class="fas fa-envelope"></i> info@nisatnewsportal.com</li>
+
+          <li><i class="fas fa-phone"></i> +880 1610 906758</li>
+
+        </ul>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <hr/>
+
+  © Copyright 2015-2023 -Nisat News Portal  All Rights Reserved |♥️Devoloped By Sabbir Hossen
+
+</footer>
+
+  </body>
+
+</html>
